@@ -10,6 +10,7 @@ const addArticle = (content) => {
     let title = document.createElement('h2')
     title.textContent = content.title
     let date = document.createElement('p')
+    date.classList.add('date')
     date.textContent = content.date
     let p = document.createElement('p')
     p.textContent = content.p

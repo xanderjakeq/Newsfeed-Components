@@ -33,6 +33,5 @@ const refresh = () => {
   articles.forEach( article => new Article(article))
 }
 
-
-
+// initial call
 refresh()
