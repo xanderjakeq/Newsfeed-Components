@@ -26,6 +26,13 @@ class Article {
 
 */
 
-let articles = document.querySelectorAll('.article');
 
-articles.forEach( article => new Article(article))
+let articles = document.querySelectorAll('.article');
+// run to transform to pretty articles
+const refresh = () => {
+  articles.forEach( article => new Article(article))
+}
+
+
+
+refresh()

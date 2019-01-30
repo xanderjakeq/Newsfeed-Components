@@ -5,7 +5,6 @@ const content = {
 }
 
 const addArticle = (content) => {
-    console.log('called')
     let parent = document.querySelector('.articles')
     let newArticle = document.createElement('div')
     let title = document.createElement('h2')
@@ -15,12 +14,21 @@ const addArticle = (content) => {
     let p = document.createElement('p')
     p.textContent = content.p
 
+    let expandBtn = document.createElement('span')
+    expandBtn.classList.add('expandButton')
+
     newArticle.classList.add('article')
     newArticle.appendChild(title)
     newArticle.appendChild(date)
     newArticle.appendChild(p)
+    newArticle.appendChild(expandBtn)
+
+
+    // how do I create an element with new Article Object
+    let shinyArticle = new Article(newArticle)
 
     parent.appendChild(newArticle)
+    refresh()
 }
 
 const removeLastArticle = () => {
@@ -33,7 +41,6 @@ const removeLastArticle = () => {
 const addBtn = document.querySelector('.add-article')
 const removeBtn = document.querySelector('.remove-last-article')
 
-console.log(addBtn, removeBtn)
 
 addBtn.addEventListener('click', (e) => {
     e.preventDefault()
